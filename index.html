@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Glowing Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1> Image Gallery</h1>
+    <div class="filters">
+      <button onclick="filterImages('all')">All</button>
+      <button onclick="filterImages('nature')">Nature</button>
+      <button onclick="filterImages('city')">City</button>
+      <button onclick="filterImages('people')">People</button>
+    </div>
+  </header>
+
+  <div class="gallery" id="gallery">
+    <!-- Nature -->
+    <div class="image-box nature"><img src="images/nature1.jpg" alt="Nature 1" onclick="openLightbox(this)" /></div>
+    <div class="image-box nature"><img src="images/nature2.jpg" alt="Nature 2" onclick="openLightbox(this)" /></div>
+    <div class="image-box nature"><img src="images/nature3.jpg" alt="Nature 3" onclick="openLightbox(this)" /></div>
+
+    <!-- City -->
+    <div class="image-box city"><img src="images/city1.jpg" alt="City 1" onclick="openLightbox(this)" /></div>
+    <div class="image-box city"><img src="images/city2.jpg" alt="City 2" onclick="openLightbox(this)" /></div>
+    <div class="image-box city"><img src="images/city3.jpg" alt="City 3" onclick="openLightbox(this)" /></div>
+
+    <!-- People -->
+    <div class="image-box people"><img src="images/people1.jpg" alt="People 1" onclick="openLightbox(this)" /></div>
+    <div class="image-box people"><img src="images/people2.jpg" alt="People 2" onclick="openLightbox(this)" /></div>
+    <div class="image-box people"><img src="images/people3.jpg" alt="People 3" onclick="openLightbox(this)" /></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <div class="nav">
+      <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+      <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <footer>
+    <p>💚 Created by Mohammed Anaan  💚</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
